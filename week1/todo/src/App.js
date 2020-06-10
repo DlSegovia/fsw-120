@@ -3,7 +3,6 @@ import React from 'react';
 function App() {
   return (
     <div>
-      
       <ul>
         <input type="checkbox"/>
         <li>Walk the dog</li>
