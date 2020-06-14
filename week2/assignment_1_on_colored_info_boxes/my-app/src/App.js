@@ -9,7 +9,6 @@ function App() {
       
         <div>
             {movies.map(movie =>{
-                console.log (movie)
                 return(
             <Movie
                 key={movie.title}
