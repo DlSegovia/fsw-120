@@ -11,6 +11,7 @@ function App() {
             {vacations.map(vacation =>{
                 return(
             <Vacation
+            imgSrc={vacation.imgSrc}
                   place={vacation.place}
                   price={vacation.price}
                   timeToGo={vacation.timeToGo}
