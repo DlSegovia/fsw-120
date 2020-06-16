@@ -1,23 +1,25 @@
 import React from "react"
-
-import Vacation from "./Vacation"
-import vacations from "./vacationDate"
+import "./App.css"
+import VacationCard from "./Vacation"
+import vacations from "./vacationData"
 
 
 function App() {
     return (
-      
+
         <div className="vacation-spots">
-            {vacations.map(vacation =>{
-                return(
-            <Vacation
-            imgSrc={vacation.imgSrc}
-                  place={vacation.place}
-                  price={vacation.price}
-                  timeToGo={vacation.timeToGo}
-            />
+            {vacations.map(vacation => {
+                return (
+                    <VacationCard className= "card"
+                    key={vacation.place}
+                        imgUrl={vacation.imgUrl}
+                        class={vacation.imageclass} 
+                        place={vacation.place}
+                        price={vacation.price}
+                        timeToGo={vacation.timeToGo}
+                    />
                 )
-                })}
+            })}
         </div>
     )
 }
