@@ -5,9 +5,12 @@
 
 .DiceContainer {
     position: absolute;
-    left: 30%;
+    top: 25px;
+    left: 35%;
+    right: auto;
+    background-color: rgb(165, 52, 52);
     display: grid;
-    grid-template-columns: repeat(4, 120px);
+    grid-template-columns: repeat(4, 100px);
     grid-gap: 10px;
     grid-auto-rows: minmax(50px, auto);
 }
@@ -16,12 +19,12 @@
     grid-column: 1 / span 4;
     grid-row: 1;
     text-align: center;
+    font-family: fantasy;
 }
 
 .item1 {
     grid-column: 2;
     grid-row: 2;
-    margin: 0;
 }
 
 .btnum1 {
@@ -77,9 +80,11 @@
     height: 50px;
     width: 50px;
     font-size: 20px;
+    background-color: white;
     border: 1px solid black;
     border-radius: 10px;
     margin: auto;
+    font-weight: 600;
     text-align: center;
     padding: 0;
 }
@@ -89,6 +94,21 @@
 .btnum3,
 .btnum4,
 .btnum5 {
+    height: 70px;
+    width: 70px;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.rollAll {
+    grid-column: 1 / span 4;
+    grid-row: 7;
+    text-align: center;
+    font-weight: 600;
+    margin: auto;
     height: 70px;
     width: 70px;
     border-radius: 10px;
