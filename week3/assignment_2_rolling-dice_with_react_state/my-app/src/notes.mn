@@ -1,0 +1,182 @@
+import React from "react";
+import "./App.css"
+
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      num1: 0,
+      num2: 0,
+      num3: 0,
+      num4: 0,
+      num5: 0
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    this.setState({
+      num1: Math.floor(Math.random() * 6),
+      num2: Math.floor(Math.random() * 6),
+      num3: Math.floor(Math.random() * 6),
+      num4: Math.floor(Math.random() * 6),
+      num5: Math.floor(Math.random() * 6)
+    });
+  };
+  render() {
+    return (
+
+      <div className="DiceContainer">
+        <h1 className="header">Try Your Luck and Roll The Dice</h1>
+        
+        <div className="item1"><h1>{this.state.num1}</h1>
+        </div>
+        <button className="btnum1" onClick={this.handleClick.num1}
+        >ROLL THE DICE!</button>
+
+        <div className="item2">{this.state.num2}
+        </div>
+        <button className="btnum2" onClick={this.handleClick}
+        >ROLL THE DICE!</button>
+
+        <div className="item3">{this.state.num3}
+        </div>
+        <button className="btnum3" onClick={this.handleClick}
+        >ROLL THE DICE!</button>
+
+        <div className="item4">{this.state.num4}
+        </div>
+        <button className="btnum4" onClick={this.handleClick}
+        >ROLL THE DICE!</button>
+
+        <div className="item5">{this.state.num5}
+        </div>
+        <button className="btnum5" onClick={this.handleClick}
+        >ROLL THE DICE!</button>
+
+        <button className="rollAll" onClick={this.handleClick}
+        >ROLL ALL DICE!</button>
+
+      </div>
+    )
+  }
+}
+
+export default App
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.DiceContainer {
+    position: absolute;
+    top: 25px;
+    left: 35%;
+    right: auto;
+    background-color: rgb(165, 52, 52);
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.header {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.item1 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.btnum1 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.item2 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.btnum2 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.item3 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.btnum3 {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.item4 {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.btnum4 {
+    grid-column: 3;
+    grid-row: 5;
+}
+
+.item5 {
+    grid-column: 2;
+    grid-row: 6;
+}
+
+.btnum5 {
+    grid-column: 3;
+    grid-row: 6;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
+}
+
+.btnum1,
+.btnum2,
+.btnum3,
+.btnum4,
+.btnum5 {
+    height: 70px;
+    width: 70px;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.rollAll {
+    grid-column: 1 / span 4;
+    grid-row: 7;
+    text-align: center;
+    font-weight: 600;
+    margin: auto;
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+}
