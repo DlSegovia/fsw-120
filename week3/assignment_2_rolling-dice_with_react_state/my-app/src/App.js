@@ -1,11 +1,11 @@
 import React from "react";
-import one from "./dice_pics/1.png";
-import two from "./dice_pics/2.png";
-import three from "./dice_pics/3.png";
-import four from "./dice_pics/4.png";
-import five from "./dice_pics/5.png";
-import six from "./dice_pics/6.png";
-import "./App.css";
+// import one from "./dice_pics/1.png";
+// import two from "./dice_pics/2.png";
+// import three from "./dice_pics/3.png";
+// import four from "./dice_pics/4.png";
+// import five from "./dice_pics/5.png";
+// import six from "./dice_pics/6.png";
+// import "./App.css";
 
 
 class App extends React.Component {
@@ -14,36 +14,44 @@ class App extends React.Component {
     this.state = {
       numberOfDice: null,
       rolls: [],
-      rollSum: null  
-    };
+      rollSum: null,
 
+    };
+   }
+
+   render() {
+    const DiceItem = this.state.rolls.map((roll, index) => <DiceImage roll={roll} key={index} 
     const DiceImage = ({ roll }) => {
-      if (roll === 1) {
-        return <img className="dice-image" src={one} alt="1" />;
-      } else if (roll === 2) {
-        return <img className="dice-image" src={two} alt="2" />;
-      } else if (roll === 3) {
-        return <img className="dice-image" src={three} alt="3" />;
-      } else if (roll === 4) {
-        return <img className="dice-image" src={four} alt="4" />;
-      } else if (roll === 5) {
-        return <img className="dice-image" src={five} alt="5" />;
-      } else if (roll === 6) {
-        return <img className="dice-image" src={six} alt="6" />;
-      };
-    };
+      if (roll === 1) 
+      {return <img className="dice-image" 
+        src={"https://raw.githubusercontent.com/DlSegovia/fsw-120/master/week3/assignment_2_rolling-dice_with_react_state/my-app/src/dice_pics/1.png"}
+        alt="1" />;
+      } 
+      else if (roll === 2) 
+      {return <img className="dice-image" 
+      src={"https://raw.githubusercontent.com/DlSegovia/fsw-120/master/week3/assignment_2_rolling-dice_with_react_state/my-app/src/dice_pics/2.png"} alt="2" />;
+      }
+       else if (roll === 3) 
+       {return <img className="dice-image" 
+        src={"https://raw.githubusercontent.com/DlSegovia/fsw-120/master/week3/assignment_2_rolling-dice_with_react_state/my-app/src/dice_pics/3.png"} alt="3" />;
+      }
+       else if (roll === 4) 
+       {return <img className="dice-image" 
+      src={"https://raw.githubusercontent.com/DlSegovia/fsw-120/master/week3/assignment_2_rolling-dice_with_react_state/my-app/src/dice_pics/4.png"} alt="4" />;
+      }
+       else if (roll === 5) 
+       {return <img className="dice-image" 
+      src={"https://raw.githubusercontent.com/DlSegovia/fsw-120/master/week3/assignment_2_rolling-dice_with_react_state/my-app/src/dice_pics/5.png"} alt="5" />;
+      }
+       else if (roll === 6) 
+       {return <img className="dice-image" 
+      src={"https://raw.githubusercontent.com/DlSegovia/fsw-120/master/week3/assignment_2_rolling-dice_with_react_state/my-app/src/dice_pics/6.png"} alt="6" />;
+      }
+    }
+    
+         
 
-    {
-      this.state.numberOfDice ? (
-        <h2>
-          Roll Total: <span className="sum">{this.state.rollSum}</span> /{" "}
-          {this.state.numberOfDice * 6}
-        </h2>
-      ) : null
-    };
-    };
-
-    diceRoll = numberOfDice => {
+    const diceRoll = numberOfDice => {
       let rolls = [];
       let rollSum = 0;
       for (let i = 0; i < numberOfDice; i++) {
@@ -54,19 +62,18 @@ class App extends React.Component {
         numberOfDice,
         rolls,
         rollSum
-      });
-    };
+      })
+    }
     
-  };
+  }/>)
   
-  render() {
-    
-      <div className="DiceContainer">
+    return (
+    <div className="DiceContainer">
         <h1 className="header">Try Your Luck and Roll The Dice</h1>
 
         <div className="buttons">
         {
-          this.state.rolls.map((roll, index) => <DiceImage roll={roll} key={index} />)
+         
         };
   {[1, 2, 3, 4, 5].map(number => {
     let text = number === 1 ? "die" : "dice";
@@ -83,8 +90,6 @@ class App extends React.Component {
   })}
 </div>
     </div>
-    
-  };
-
+  )
 
   export default App
