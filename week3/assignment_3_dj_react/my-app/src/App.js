@@ -1,27 +1,22 @@
 import React from "react";
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import "./App.css"
 
-class App extends React.Component {
-    constructor() {
-        super()
-        this.state = {
+var Box = React.createClass({
+    getInitialState() {
+        return {
             color: 'black'
-        }}
-        var Box = React.createClass({
-            getInitialState: function() {
-                return {
-                    color: 'black'
-                };
-            },
+        }},
+        
+        
     changeColor: function() {
         var newColor = this.state.color === 'white' ? 'black' : 'white';
         this.setState({
             color: newColor
-        });
+        })
     },
-
-    render: function() {
+         
+     render() {
         return (
             <div>
                 <div
@@ -34,9 +29,10 @@ class App extends React.Component {
                 >
                 </div>
             </div>
-        )},
+        )}
+                })
+                
 
 
 
-
-export default App
+export default Box
