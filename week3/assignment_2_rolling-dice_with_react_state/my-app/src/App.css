@@ -37,3 +37,13 @@
 .sum {
     font-size: 48px;
 }
+
+
+/* handleClick = () => {
+    this.setState((prevState, { count }) => ({
+      count: prevState.count + 1
+    }));
+  }; */
+
+
+/* console.long(rollCount, "rollCount") */

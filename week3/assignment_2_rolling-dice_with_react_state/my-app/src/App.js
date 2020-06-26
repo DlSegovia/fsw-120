@@ -9,6 +9,7 @@ class App extends Component {
       rollSum: 0
     }
   }
+  
   diceRoll = numberOfDice => {
     let rolls = [];
     let rollSum = 0;
@@ -18,7 +19,9 @@ class App extends Component {
       console.log(rolls, "rolls")
       rollSum += rolls[i];
       console.log(rollSum, "rollSum")
+    
     }
+
     this.setState({
       numberOfDice,
       rolls,
@@ -52,18 +55,16 @@ class App extends Component {
         alt="dice" />
     )
   }
+  
   render() {
     return (
       <div className="App">
-        <h1>Dice Roll Demo</h1>
+        <h1>My Dice Game <br /> The Best Card Hand Wins</h1>
         {
           [1, 2, 3, 4, 5].map(number => {
             let text = number === 1 ? "die" : "dice";
             return (
-              <button
-                key={number}
-                onClick={() => this.diceRoll(number)}
-                className="button">
+              <button key={number} onClick={() => this.diceRoll(number)} className="button">
                 {number} {text}
               </button>
             );
