@@ -1,38 +1,48 @@
-import React from "react";
-// import ReactDOM from 'react-dom';
+import React, { Component } from "react"
+import App from "react"
 import "./App.css"
 
-var Box = React.createClass({
-    getInitialState() {
-        return {
-            color: 'black'
-        }},
+
+class App extends React.Component {
+    constructor(props){
+      super(props)
+      this.state ={
         
-        
-    changeColor: function() {
-        var newColor = this.state.color === 'white' ? 'black' : 'white';
-        this.setState({
-            color: newColor
-        })
-    },
-         
-     render() {
-        return (
-            <div>
-                <div
-                    style = {{
-                        background: this.state.color,
-                        width: 100,
-                        height: 100
-                    }}
-                    onClick = {this.changeColor}
-                >
-                </div>
-            </div>
-        )}
-                })
-                
+          square1: {color:DEFAULT_COLOR},
+          square2: {color:DEFAULT_COLOR}, 
+          square3: {color:DEFAULT_COLOR},
+          square4: {color:DEFAULT_COLOR}
+        };
+      }
+      onChangeColorEvent = (event) => {
+        const currentSquare = 'square'+event.target.id;
+        this.setState((previousState) => {
+            return { ...previousState, [currentSquare]: {color:this.getRandomColor()}};
+      });
+    }
+    blue = (event) => {
+      const currentSquare = 'square'+event.target.id;
+      return (
+      this.setState({[currentSquare]: {color: "blue"}}))
+  }
 
-
-
-export default Box
+  blackOrWhite = ()=> {
+    if (this.state.square1.color === "white") {
+        this.setState({square1: {color: "black"}}),
+        this.setState({square2: {color: "black"}}),
+        this.setState({square3: {color: "black"}}),
+        this.setState({square4: {color: "black"}})
+      
+    } 
+    else if (this.state.square1.color !== "white") {
+      this.setState({square1: {color: "white"}}),
+        this.setState({square2: {color: "white"}}),
+        this.setState({square3: {color: "white"}}),
+        this.setState({square4: {color: "white"}})
+    } 
+  }
+    }
+  
+  
+  export default App
+  

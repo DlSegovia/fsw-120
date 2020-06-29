@@ -1,0 +1,61 @@
+name: "",
+        nameList: []
+      }
+    }
+    }
+    // this.handleChange = this.handleChange.bind(this)
+  
+  handleChange(event) {
+    this.setState({
+      [event.target.name]:
+        event.target.value
+    })
+  }
+  onClick(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  import React from "react"
+import NameList from "./NameList"
+
+class App extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      name: "",
+      NameList: []
+    }
+
+handleChange(event) {
+  event.preventDefault ()
+  this.setState({
+    name: event.target.value
+  })
+}
+
+handleNameList(event) {
+  event.preventDefault()
+  this.setState({
+    listItem: this.state.NameList.concat(this.state.name)
+
+  })
+}
+  
+  render(){
+    return(
+<form>
+  <imput type = "text" name = "name" placeholder = "First Name" onchange = {this.handleChange}/>
+  </form>
+    )
+  }
+}
+
+
+
+
+
+
+
+export default App

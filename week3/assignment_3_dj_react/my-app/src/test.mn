@@ -1,0 +1,31 @@
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const black = '#000000';
+const white = '#FFFFFF';
+
+export default class Toggle extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = { color: black };
+    this.changeColor = this.changeColor.bind(this);
+  }
+  changeColor(){
+    const newColor = this.state.color === black ? white : black;
+    this.setState({ color: newColor })
+  }
+  render(){
+    return(
+      <div style={{background: this.state.color}}>
+      <h1>Change my color</h1>
+      <button onClick={this.changeColor}>Click</button>
+      </div>
+    )
+  }
+}
+ReactDOM.render(<Toggle />, document.getElementById('root'))
+
+
