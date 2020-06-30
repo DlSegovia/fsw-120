@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import Square from './Square';
 // import './App.css';
 // import './index.css';
@@ -24,25 +22,21 @@ class App extends React.Component {
           return { ...previousState, [currentSquare]: {color:this.getRandomColor()}};
     });
   }
-  blue = (event) => {
-      const currentSquare = 'square'+event.target.id;
-      return (
-      this.setState({[currentSquare]: {color: "blue"}}))
-  }
+  
   blackOrWhite = ()=> {
     if (this.state.square1.color === "white") {
       return (
         this.setState({square1: {color: "black"}}),
-        this.setState({square2: {color: "black"}}),
-        this.setState({square3: {color: "black"}}),
+        this.setState({square2: {color: "white"}}),
+        this.setState({square3: {color: "white"}}),
         this.setState({square4: {color: "black"}})
       )
     } 
     if (this.state.square1.color !== "white") {
       return (
         this.setState({square1: {color: "white"}}),
-        this.setState({square2: {color: "white"}}),
-        this.setState({square3: {color: "white"}}),
+        this.setState({square2: {color: "black"}}),
+        this.setState({square3: {color: "black"}}),
         this.setState({square4: {color: "white"}})
       )
     } 
@@ -53,22 +47,29 @@ class App extends React.Component {
         this.setState({square2: {color: "purple"}})
       )      
     }
+
+    blue = (event) => {
+      const currentSquare = 'square'+event.target.id;
+      return (
+      this.setState({[currentSquare]: {color: "blue"}}))
+  }
+
   getRandomColor = () => {
     let randomColor = Math.random()
     if (randomColor <= 0.1) {
-        return "violet";
+        return "Lime";
     }
     if (randomColor > 0.1 && randomColor < 0.3) {
-      return "coral";
+      return "HotPink";
     }
     if (randomColor >= 0.3 && randomColor < 0.5) {
-      return "teal";
+      return "Aquamarine";
     }
     if (randomColor >= 0.5 && randomColor < 0.7) {
-      return "pink";
+      return "DodgerBlue";
     } 
     if (randomColor >= 0.7) {
-      return "green";
+      return "BlueViolet";
     }
   }
   render(){
