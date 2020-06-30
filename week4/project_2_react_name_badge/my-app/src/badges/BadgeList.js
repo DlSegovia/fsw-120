@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import BadgeCard from './BadgeCard'
 
-
-class BadgeList extends Component {
+class BadgeList extends React.Component {
 
     render() {
 
-
-        const mappedCards = this.props.nameBadge.map((card, i) => {
+        const mappedCards = this.props.nameBadges.map((card, i) => {
             return (
                 <BadgeCard
                     key={i}
@@ -19,14 +17,14 @@ class BadgeList extends Component {
                 />
             )
         })
+
         return (
             <div>
-                Badge List
+                <br />
                 {mappedCards}
             </div>
         )
     }
 }
-
 
 export default BadgeList

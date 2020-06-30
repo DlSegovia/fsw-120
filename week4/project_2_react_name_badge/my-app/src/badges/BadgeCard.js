@@ -3,7 +3,7 @@ import React from 'react';
 
 
 const BadgeCard = ({
-    index, firstName, lastName, age, handleDelete}) => {
+    index, firstName, lastName, age, handleDelete }) => {
     return (
         <div>
             <h1>{firstName}</h1>

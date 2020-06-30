@@ -1,20 +1,21 @@
-import React, {Component } from 'react'
+import React, { Component } from 'react'
 import BadgeList from './BadgeList'
 
+
 class BadgeForm extends Component {
-    constructor(){
+    constructor() {
         super()
-        this.state={
-          firstName: '',
-          lastName: '',
-          age: 0,
-          nameBadges: []
+        this.state = {
+            firstName: '',
+            lastName: '',
+            age: 0,
+            nameBadges: []
         }
     }
 
     handleChange = (e) => {
         const { name, value } = e.target
-        this.setState({ [name] : value })
+        this.setState({ [name]: value })
     }
 
     handleSubmit = (e) => {
@@ -24,11 +25,11 @@ class BadgeForm extends Component {
             lastName: this.state.lastName,
             age: this.state.age,
         }
-        this.setState({ 
-            nameBadges : [ newUserData, ...this.state.nameBadges ], 
-            firstName: '', 
+        this.setState({
+            nameBadges: [newUserData, ...this.state.nameBadges],
+            firstName: '',
             lastName: '',
-            age: 0, 
+            age: 0,
         })
     }
 
@@ -40,42 +41,52 @@ class BadgeForm extends Component {
     }
 
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                Hi im a class component
-                <label> 
-                    First Name : 
-                </label>
+
                 <form onSubmit={this.handleSubmit}>
-                    <input 
+                    <label className='fname'>
+                        First Name :
+                </label>
+                    <input className='input1'
                         type='text'
                         name='firstName'
                         value={this.state.firstName}
                         onChange={this.handleChange}
                         required={true}
                     />
-                    <input 
+                    <br />
+                    <br />
+                    <label className='lname'>
+                        Last Name :
+                        </label>
+                    <input className='input2'
                         type='text'
                         name='lastName'
                         value={this.state.lastName}
                         onChange={this.handleChange}
                     />
-                    Age: 
-                    <input 
+                    <br />
+                    <br />
+                        Age:
+                    <input className='inpit3'
+                        style={{ width: 45 }}
                         type='number'
                         name='age'
                         value={this.state.age}
                         onChange={this.handleChange}
                     />
-                    <button> Submit Me </button>
+                    <br />
+                    <br />
+                    <button className='bt1'> Submit Me </button>
                 </form>
 
-                <BadgeList 
+                <BadgeList
                     nameBadges={this.state.nameBadges}
                     handleDelete={this.handleDelete}
                 />
-               
+
             </div>
         )
     }
