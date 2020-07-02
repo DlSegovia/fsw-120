@@ -12,8 +12,8 @@ body {
 }
 
 .my-link-wrapper img {
-    height: 80px;
-    margin-left: 40px;
+    height: 60px;
+    margin: 0 80px 0 40px;
 }
 
 .my-link-wrapper {
@@ -34,4 +34,13 @@ body {
     margin: 20px;
     color: black;
     text-decoration: none;
+}
+
+.image1 {
+    align-items: center;
+}
+
+.pi .p2 {
+    font-family: fantasy;
+    font-size: 25px;
 }
