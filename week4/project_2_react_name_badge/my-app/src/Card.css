@@ -1,0 +1,85 @@
+/*       2nd css For badge card      */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.badge {
+    display: grid;
+    grid-template-columns: [bg1] 115px [bg2] 225px [bg3] 115px [bg4] 175px;
+    grid-template-rows: [r1] 40px [r2] 30px [r3] 30px [r4] 30px [r5] 130px [r6] 30px;
+    justify-content: center;
+    border: 1px solid black;
+    margin-left: 20%;
+    margin-bottom: 10px;
+    place-content: center;
+    width: 800px;
+    height: 400px;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.header {
+    background-color: cornflowerblue;
+    top: 0;
+    font-size: 25px;
+    grid-column-start: bg1;
+    grid-column-end: bg5;
+    grid-row-start: r1;
+    grid-row-end: r1;
+    text-align: left;
+}
+
+.fname {
+    grid-column-start: bg1;
+    grid-column-end: bg2;
+    grid-row-start: r2;
+}
+
+.lname {
+    grid-column-start: bg2;
+    grid-column-end: bg3;
+    grid-row-start: r2;
+    text-align: left;
+}
+
+.phnum {
+    grid-column-start: bg4;
+    grid-column-end: bg6;
+    grid-row-start: r2;
+}
+
+.pob {
+    grid-column-start: bgl;
+    grid-column-end: bg1;
+    grid-row-start: r3;
+    text-align: left;
+}
+
+.favfood {
+    grid-column-start: bg4;
+    grid-column-end: bg6;
+    grid-row-start: r3;
+}
+
+.email {
+    grid-column-start: bg1;
+    grid-column-end: bg4;
+    grid-row: r4;
+}
+
+.txarea2 {
+    grid-column-start: bg1;
+    grid-column-end: bg5;
+    grid-row-start: r5;
+    /* height: 150px; */
+}
+
+.btn2 {
+    grid-column: 2 / span 2;
+    grid-row: r6;
+    width: 100px;
+    justify-self: center;
+    border-radius: 10px;
+}

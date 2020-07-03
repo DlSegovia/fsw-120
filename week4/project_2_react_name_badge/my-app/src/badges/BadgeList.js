@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import BadgeCard from './BadgeCard'
 
 class BadgeList extends React.Component {
@@ -8,15 +8,16 @@ class BadgeList extends React.Component {
         const mappedCards = this.props.nameBadges.map((card, i) => {
             return (
                 <BadgeCard
-                key={i}
-                index={i}
-                firstName={card.firstName}
-                lastName={card.lastName}
-                email={card.email}
-                placeOfBirth={card.placeOfBirth}
-                phoneNumber={card.phoneNumber}
-                favoriteFood={card.favoriteFood}
-                handleDelete={this.props.handleDelete}
+                    key={i}
+                    index={i}
+                    firstName={card.firstName}
+                    lastName={card.lastName}
+                    email={card.email}
+                    placeOfBirth={card.placeOfBirth}
+                    phoneNumber={card.phoneNumber}
+                    favoriteFood={card.favoriteFood}
+                    textarea={card.textarea}
+                    handleDelete={this.props.handleDelete}
                 />
             )
         })

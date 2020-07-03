@@ -3,6 +3,7 @@ import BadgeList from './BadgeList'
 import '../App.css'
 
 
+
 class BadgeForm extends Component {
     constructor() {
         super()
@@ -11,7 +12,7 @@ class BadgeForm extends Component {
             lastName: '',
             email: '',
             placeOfBirth: '',
-            phoneNumber: 0,
+            phoneNumber: '',
             favoriteFood: '',
             textarea: '',
             nameBadges: [],
@@ -35,6 +36,7 @@ class BadgeForm extends Component {
             favoriteFood: this.state.favoriteFood,
             textarea: this.state.textarea,
         }
+
         this.setState({
             nameBadges: [newUserData, ...this.state.nameBadges],
             firstName: '',
@@ -47,18 +49,17 @@ class BadgeForm extends Component {
         })
     }
 
-
     handleDelete = (i) => {
         let updatedBadgeArray = this.state.nameBadges
         updatedBadgeArray.splice(i, 1)
         this.setState({ nameBadges: updatedBadgeArray })
     }
 
-
     render() {
         return (
             <div className='container'>
                 <form className='form' onSubmit={this.handleSubmit}>
+
                     <h1 className='h1'>Bagde Card Template</h1>
 
                     <input className='input1'
@@ -110,9 +111,9 @@ class BadgeForm extends Component {
                         onChange={this.handleChange}
                     />
 
-                    <textarea className='txarea' value={'Tell us something about yourself'}
-                        onChange={this.handleChange} rows={8} cols={95} />
-                    
+                    <textarea className='txarea' placeholder={'Tell us about yourself'}
+                        value={this.state.textarea} onChange={this.handleChange} />
+
                     <button className='bt1'> Submit Me </button>
 
                 </form>

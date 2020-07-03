@@ -4,7 +4,7 @@ import BadgeForm from './badges/BadgeForm'
 function App() {
   return (
     <div className="App">
-      
+
       <BadgeForm />
     </div>
   );
