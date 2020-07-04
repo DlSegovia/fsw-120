@@ -55,9 +55,24 @@ body {
 /* Styling for About */
 
 .image2 {
-    position: absolute;
-    margin-left: 80%;
-    border-radius: 10px;
+    float: left;
+    top: 100px;
+    margin: 3px 12px 3px 0px;
+    border: 1px solid #000000;
 }
 
-.image3 {}
+.image4 {
+    float: right;
+    margin: 3px 330px 25px 25px;
+    width: 700px;
+}
+
+.image3 {
+    float: right;
+    margin: 5px 0px 3px 10px;
+    border: 1px solid #000000;
+}
+
+p {
+    text-indent: 50px;
+}
