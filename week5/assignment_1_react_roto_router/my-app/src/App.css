@@ -50,3 +50,14 @@ body {
     font-size: 35px;
     text-align: center;
 }
+
+
+/* Styling for About */
+
+.image2 {
+    position: absolute;
+    margin-left: 80%;
+    border-radius: 10px;
+}
+
+.image3 {}
