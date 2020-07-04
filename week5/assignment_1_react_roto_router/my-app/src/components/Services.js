@@ -1,4 +1,4 @@
-import React, {useState, useEfect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 const Services = () => {
 const [firstName, setfirstName] = useState('')
@@ -18,8 +18,8 @@ const handleSubmit = (e) => {
       formCleanUp()
 
   return (
-    <div className="Register">
-      Register
+    <div className="Services">
+      Services
     
       <form onSubmit={handleSubmit}>
           First Name:

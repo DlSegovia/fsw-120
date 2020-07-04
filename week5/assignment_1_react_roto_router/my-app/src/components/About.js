@@ -3,8 +3,12 @@ import React from 'react';
 function About() {
   return (
     <div className="About">
-      About
-      
+      <div>
+<img src= '' atl=''/>
+      </div>
+      <div>
+<img />
+      </div>
     </div>
   );
 }

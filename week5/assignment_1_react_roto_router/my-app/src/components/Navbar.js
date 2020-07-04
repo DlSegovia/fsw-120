@@ -7,10 +7,10 @@ function Navbar() {
     
     <div className="Navbar">
       <ul className='my-link-wrapper'>
-    <img src= 'https://github.com/DlSegovia/fsw-120/blob/master/week5/assignment_1_react_roto_router/my-app/src/Roto%20Router/logo.png?raw=true'/>
+    <img src= 'https://github.com/DlSegovia/fsw-120/blob/master/week5/assignment_1_react_roto_router/my-app/src/Roto%20Router/logo.png?raw=true'alt= ' '/>
           <Link className='my-nav-links' to='/'> Home </Link>
           <Link className='my-nav-links' to='/about'> About </Link>
-          <Link className='my-nav-links' to='/register'> Register </Link>
+          <Link className='my-nav-links' to='/services'> Services </Link>
       </ul>
     </div>
   );
