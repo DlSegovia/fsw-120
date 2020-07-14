@@ -16,6 +16,8 @@ class App extends Component {
     };
   }
 
+  // Here is the had
+
   addToInput = val => {
     this.setState({ input: this.state.input + val });
   };
@@ -39,31 +41,30 @@ class App extends Component {
   };
 
   add = () => {
-    this.state.previousNumber = this.state.input;
-    this.setState({ input: "" });
-    this.state.operator = "plus";
+    this.setState ({previousNumber: this.state.input})
+    this.setState({ input: "", operator: "plus" })
+    
   };
 
   subtract = () => {
-    this.state.previousNumber = this.state.input;
-    this.setState({ input: "" });
-    this.state.operator = "subtract";
+    this.setState ({previousNumber: this.state.input})
+    this.setState({ input: "", operator: "subtract" })
   };
   
   multiply = () => {
-    this.state.previousNumber = this.state.input;
-    this.setState({ input: "" });
-    this.state.operator = "multiply";
+    this.setState ({previousNumber: this.state.input})
+    this.setState({ input: "", operator: "multiply" })
   };
 
   divide = () => {
-    this.state.previousNumber = this.state.input;
-    this.setState({ input: "" });
-    this.state.operator = "divide";
+    this.setState ({previousNumber: this.state.input})
+    this.setState({ input: "", operator: "divide" })
   };
 
+  // here is the logic of the operator buttons
+
   evaluate = () => {
-    this.state.currentNumber = this.state.input;
+    this.setState.currentNumber = this.state.input
 
     if (this.state.operator === "plus") {
       this.setState({
@@ -71,26 +72,29 @@ class App extends Component {
           parseInt(this.state.previousNumber) +
           parseInt(this.state.currentNumber)
       });
-    } else if (this.state.operator == "subtract") {
+    } else if (this.state.operator === "subtract") {
       this.setState({
         input:
           parseInt(this.state.previousNumber) -
           parseInt(this.state.currentNumber)
       });
-    } else if (this.state.operator == "multiply") {
+    } else if (this.state.operator === "multiply") {
       this.setState({
         input:
           parseInt(this.state.previousNumber) *
           parseInt(this.state.currentNumber)
       });
-    } else if (this.state.operator == "divide") {
+    } else if (this.state.operator === "divide") {
       this.setState({
         input:
           parseInt(this.state.previousNumber) /
           parseInt(this.state.currentNumber)
-      });
+      })
     }
   };
+
+// Here is the handle click for all the keys
+
 
   render() {
     return (
