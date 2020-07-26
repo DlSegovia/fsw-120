@@ -1,0 +1,15 @@
+.columnContainer {
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li {
+    text-decoration: none;
+}
+
+.iconColm {
+    text-decoration: none;
+    font-size: 15px;
+    height: 15px;
+}

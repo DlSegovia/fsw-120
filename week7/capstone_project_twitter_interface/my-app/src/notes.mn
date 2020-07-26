@@ -1,0 +1,17 @@
+<i className="fa fa-twitter"></i>
+        <br /><br />
+        <i className="fa fa-home">Home</i>
+        <br /><br />
+        <i className="fa fa-hashtag">Explore</i>
+        <br /><br />
+        <i className="fa fa-bell-o">Notifications</i>
+        <br /><br />
+        <i className="fa fa-envelope">Messages</i>
+        <br /><br />
+        <i className="fa fa-bookmark-o">Bookmark</i>
+        <br /><br />
+        <i className="fa fa-list">List</i>
+        <br /><br />
+        <i className="fa fa-user">Profile</i>
+        <br /><br />
+        <i></i>
